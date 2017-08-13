@@ -1,12 +1,22 @@
+<body>
 <textarea id="code"></textarea>
 <button onclick="run()">Run</button>
 <script>
 function run() {
-  var el = document.getElementById("code");
+	var code = document.getElementById("code").value;
+	document.cookie = "code=" + code;
+
+    var el = document.getElementById("code");
   
-  newScript = document.createElement('script');
+    newScript = document.createElement('script');
     newScript.id = 'scriptContainer';
     newScript.text = el.value;
     document.body.appendChild(newScript);
 }
+
+function getcode() {
+var code = document.cookie(getCookie("code"));
+document.getElementById("code").innerHTML = code;
+}
 </script>
+</body onload="function() {getcode()}">
