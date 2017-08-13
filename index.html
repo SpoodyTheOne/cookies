@@ -1,8 +1,12 @@
-<button onclick="alertCookie()">Show cookies</button>
+<textarea id="code"></textarea>
+<button onclick="run()">Run</button>
 <script>
-var name = prompt("what is your name?");
-document.cookie = "name=" + name;
-function alertCookie() {
-  alert(document.cookie);
+function run() {
+  var el = document.getElementById("code");
+  
+  newScript = document.createElement('script');
+    newScript.id = 'scriptContainer';
+    newScript.text = el.value;
+    document.body.appendChild(newScript);
 }
 </script>
