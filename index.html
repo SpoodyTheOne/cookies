@@ -1,7 +1,7 @@
 <button onclick="alertCookie()">Show cookies</button>
 <script>
-document.cookie = "name=oeschger";
-document.cookie = "favorite_food=tripe";
+var name = prompt("what is your name?");
+document.cookie = "name=" + name;
 function alertCookie() {
   alert(document.cookie);
 }
