@@ -1,4 +1,4 @@
-<body>
+<body onload="getcode()">
 <textarea id="code"></textarea>
 <button onclick="run()">Run</button>
 <script>
@@ -15,8 +15,9 @@ function run() {
 }
 
 function getcode() {
+alert("loading code from your previous visit :)");
 var code = document.cookie(getCookie("code"));
 document.getElementById("code").innerHTML = code;
 }
 </script>
-</body onload="function() {getcode()}">
+</body>
