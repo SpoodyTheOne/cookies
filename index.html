@@ -31,7 +31,7 @@ function run() {
 
 function getcode() {
 alert("loading code from your previous visit :)");
-var code = getCookie("code");
+var code = parseString( getCookie("code"));
 document.getElementById("code").value = code;
 }
 </script>
