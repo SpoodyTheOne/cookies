@@ -1,7 +1,7 @@
-<body>
+<body onload="getcode()">
 <textarea id="code"></textarea>
 <button onclick="run()">Run</button>
-<script onload="getcode()">
+<script>
 function getCookie(varNavn) {
     var name = varNavn + "=";
     var ca = document.cookie.split(';');
