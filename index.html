@@ -1,7 +1,7 @@
-<body onload="getcode()">
+<body>
 <textarea id="code"></textarea>
 <button onclick="run()">Run</button>
-<script>
+<script onload="getcode()">
 function getCookie(varNavn) {
     var name = varNavn + "=";
     var ca = document.cookie.split(';');
@@ -19,7 +19,7 @@ function getCookie(varNavn) {
 
 function run() {
 	var code = document.getElementById("code").value;
-	document.cookie = "code=" + code + "expires=Thu, 18 Dec 2023 12:00:00 UTC";";
+	document.cookie = "code=" + code + "; expires=Thu, 18 Dec 2023 12:00:00 UTC";
 
     var el = document.getElementById("code");
   
