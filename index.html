@@ -31,8 +31,8 @@ function run() {
 
 function getcode() {
 alert("loading code from your previous visit :)");
-var code = parseString( getCookie("code"));
-document.getElementById("code").value = code;
+var prev_code = parseString( getCookie("code"));
+document.getElementById("code").value = prev_code;
 }
 </script>
 </body>
