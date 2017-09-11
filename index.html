@@ -2,6 +2,21 @@
 <textarea id="code"></textarea>
 <button onclick="run()">Run</button>
 <script>
+function getCookie(varNavn) {
+    var name = varNavn + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 function run() {
 	var code = document.getElementById("code").value;
 	document.cookie = "code=" + code;
